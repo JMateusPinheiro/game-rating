@@ -1,11 +1,9 @@
 import React from 'react';
-import {View, Image, Button, StyleSheet} from 'react-native';
+import {View, Image, Text, StyleSheet} from 'react-native';
 
-const Header = (props) => (
-    <View style={styles.container}>
-        <Image style={styles.logo}
-          source={require('../../assets/logo.png')}
-        />
+const Header2 = (props) => (
+    <View>
+        <Text>{props.title.toUpperCase()}</Text>
     </View>
 );
 
@@ -29,4 +27,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default Header;
+export default Header2;

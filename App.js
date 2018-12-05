@@ -1,15 +1,17 @@
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator, DrawerNavigator } from 'react-navigation';
+import React from 'react';
 
-import HomePage from './src/screens/HomePage';
+import HomeScreen from './src/screens/HomeScreen';
+import GameDetailScreen from './src/screens/GameDetailScreen';
+import MyDrawer from './src/components/MyDrawer';
 
 
 export default createStackNavigator({
-  'Home':{
-    screen: HomePage
-  }
+  'Home':{screen: HomeScreen},
+  'GameDetail':{screen: GameDetailScreen,}
 },{
   navigationOptions:{
-    title: 'Game Rating',
+    headerTitle: <MyDrawer/>,
     headerStyle:{
 
     },
@@ -18,5 +20,3 @@ export default createStackNavigator({
     }
   }
 })
-
-// export default HomePage
